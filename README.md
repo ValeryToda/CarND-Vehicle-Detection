@@ -22,8 +22,9 @@ The goals / steps of this project are the following:
 - output\_images/HOG: resulting images from the HOG transformation
 - output\_images/project\_video\_output.mp4: resulting video from the pipeline
 - output\_images/test\_video\_output.mp4 resulting video from the test pipeline
-- set\_non\_vehicles/*.jpeg: set of non vehicles for the training of the SVM-Model
-- set\_vehicles/*.jpeg: set of vehicles for the training of the SVM-Model
+- set\_non\_vehicles/*.jpeg: set of non vehicles for the training of the SVM-Model. (complete set available [here](https://s3.amazonaws.com/udacity-sdc/Vehicle_Tracking/non-vehicles_smallset.zip)) 
+- set\_vehicles/*.jpeg: set of vehicles for the training of the SVM-Model. (complete set available [here](https://s3.amazonaws.com/udacity-sdc/Vehicle_Tracking/vehicles_smallset.zip))
+
 - helpers.py: implemetation of car finding algorithm helpers
 - **VehicleDetectionAndTracking.ipynb**: main project file
 
