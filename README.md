@@ -60,7 +60,7 @@ Here is an example* using the `YCrCb` color space and the following HOG descript
 
 ![png](./output_images/WU/output_10_0.png)
 
-*Please open the originl images and zoom into them to have a besser inside of the HOG-descriptors.
+*Please open the original images and zoom into them to have a besser inside of the HOG-descriptors.
 
 ### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
 
@@ -128,7 +128,7 @@ Here's a [link to my video result](./output_images/project_video_output.mp4)
 
 ### 2. Describe how (and identify where in your code) you implemented some kind of filter for false positives and some method for combining overlapping bounding boxes.
 
-I recorded the positions of positive detections in each frame of the video.  From the positive detections I created a heatmap tha I saved in a hatmap container. Every 15 frames I calculated the mean of 15 last saved heatmaps and then thresholded that map to identify vehicle positions.  I then used `scipy.ndimage.measurements.label()` to identify individual blobs in the heatmap.  I then assumed each blob corresponded to a vehicle.  I constructed bounding boxes to cover the area of each blob detected. 
+I recorded the positions of positive detections in each frame of the video.  From the positive detections I created a heatmap that I saved in a heatmap container. Every 15 frames I calculated the mean of 15 last saved heatmaps and then thresholded that map to identify vehicle positions.  I then used `scipy.ndimage.measurements.label()` to identify individual blobs in the heatmap.  I then assumed each blob corresponded to a vehicle.  I constructed bounding boxes to cover the area of each blob detected. 
 
 ---
 
@@ -136,6 +136,6 @@ I recorded the positions of positive detections in each frame of the video.  Fro
 
 ### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-Overall this approach of tracking vehicles is good and the robustness depends the choosen neural network for the detection. The main problem I encountered was the false positive. After some experimentations I realized that the SVM could not generalized very well. A possible solution could be to use convolutional neural network to detect the car within the sliding window algorithm. It could improve the detection and therefore make the pipeline more robust.
+Overall this approach of tracking vehicles is good and the robustness depends on the choosen neural network for the detection. The main problem I encountered was getting rid of the false positives. After some experimentations I realized that the SVM could not generalized very well. A possible solution could be to use convolutional neural network to detect the car within the sliding window algorithm. It could improve the detection and therefore make the pipeline more robust.
 
 
